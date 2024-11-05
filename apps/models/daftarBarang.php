@@ -50,8 +50,8 @@ class daftarBarang extends Model{
     }
 
     public function hapusBarang($id) {
-        $stmt = "delete from daftarbarang where id = $id";
-        $query = $this->db->query($stmt);
+        $stm = "delete from daftarbarang where id = $id";
+        $query = $this->db->query($stm);
         if ($query->rowCount()>0) {
             return true;
         }
