@@ -8,7 +8,7 @@ class daftarBarang extends Model{
 
     public function __construct() {
         $this->db = new DB();
-        $this->db->connect('mysql','localhost','root','','mvcapp');
+        $this->db->connect('mysql','localhost','root','santa123','mvcapp');
     }
 
     public function getDataAll() {
