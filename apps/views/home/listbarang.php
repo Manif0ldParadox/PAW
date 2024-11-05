@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-
-    <table class="table">
-=======
 <a href="<?= BASE_URL.'index.php?r=home/insertbarang'?>" class="btn btn-primary">Tambah Barang</a>
 <table class="table">
->>>>>>> 1a7d3376e91a2b34fdeb9146650507943fa3f5fa
     <thead class="thead-dark">
         <tr>
             <th>ID</th>
