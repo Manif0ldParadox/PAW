@@ -32,10 +32,6 @@ class Home extends Controller {
         $this->loadview('home/listbarang', $data);
         $this->loadview('template/footer');
 
-        // foreach ($this->df->getDataAll() as $item) {
-        //     echo $item['id']. " ". $item['nama']. " ". $item['qty'];
-        //     echo "<br />";
-        // }
     }
 
     public function insertbarang() {
