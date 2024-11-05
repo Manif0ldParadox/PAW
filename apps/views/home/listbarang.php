@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
     <table class="table">
+=======
+<a href="<?= BASE_URL.'index.php?r=home/insertbarang'?>" class="btn btn-primary">Tambah Barang</a>
+<table class="table">
+>>>>>>> 1a7d3376e91a2b34fdeb9146650507943fa3f5fa
     <thead class="thead-dark">
         <tr>
             <th>ID</th>
@@ -12,7 +17,9 @@
         <tr scope="row">
             <td><?= $item['id'] ?></td>
             <td><?= $item['nama'] ?></td>
-            <td><?= $item['qty'] ?></td>
+            <td><span class="badge text-bg-<?= $item['qty']>50? 'success' : 'danger'?>"> <?= $item['qty'] ?></span></td>
+            <td><a href="<?= BASE_URL.'index.php?r=home/updatebarang/'.$item['id']?>" class="btn btn-secondary">Update</a></td>
+            <td><a href="<?= BASE_URL.'index.php?r=home/deletebarang/'.$item['id'] ?>" class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')">Delete</a></td>
         </tr>
         </tbody>
         <?php endforeach ?>

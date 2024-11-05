@@ -37,4 +37,50 @@ class Home extends Controller {
         //     echo "<br />";
         // }
     }
+
+    public function insertbarang() {
+        if(!empty($_POST)) {
+            if ($this->df->tambahBarang($_POST)) {
+                header('location: '.BASE_URL.'index.php?r=home/listbarang');
+                exit;
+            }
+
+        }
+
+        $this->loadview('template/header', ['title'=>'Insert Barang']);
+        $this->loadview('home/insert');
+        $this->loadview('template/footer');
+    }
+
+    public function updatebarang($id) {
+
+        $data = $this->df->getDataById($id);
+
+        if(!empty($_POST)) {
+            if ($this->df->updateBarang($_POST)) {
+                header('location: '.BASE_URL.'index.php?r=home/listbarang');
+                exit;
+            }
+
+        }
+
+        $this->loadview('template/header', ['title'=>'Update Barang']);
+        $this->loadview('home/update', $data);
+        $this->loadview('template/footer');
+    }
+
+    public function deletebarang($id) {
+
+        $data = $this->df->getDataById($id);
+
+        if($this->df->hapusBarang($id)) {
+            
+                header('location: '.BASE_URL.'index.php?r=home/listbarang');
+                exit;
+            
+              
+            
+
+        }
+    }
 }
